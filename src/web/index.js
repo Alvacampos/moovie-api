@@ -9,6 +9,10 @@ apiRouter.get('/healthcheck', (ctx) => {
   ctx.body = { status: 'ok' };
 });
 
+apiRouter.get('/qwe', () => {
+  console.log('hola');
+});
+
 apiRouter.use(requestLoggerMiddleware());
 
 apiRouter.use('/things', thingsRouter.routes()); // bin/cleanup mark
