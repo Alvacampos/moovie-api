@@ -2,7 +2,7 @@ const { Model } = require('objection');
 
 class Genre extends Model {
   static get tableName() {
-    return 'Genre';
+    return 'genre';
   }
 
   // static get relationMappings() {

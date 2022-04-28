@@ -2,7 +2,7 @@ const { Serializer } = require('../../../lib');
 
 class GenreSerializer extends Serializer {
   constructor() {
-    super({ collectionName: 'Genre' });
+    super({ collectionName: 'genre' });
 
     this.baseFields = ['name'];
 

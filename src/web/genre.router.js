@@ -1,10 +1,8 @@
 const Router = require('@koa/router');
 const genreLib = require('../lib/genres');
-const categoriesLib = require('../lib/categories.sample');
 const { withResponseMiddleware } = require('../../lib');
 
 const { GenreSerializer } = genreLib;
-const { CategorySerializer } = categoriesLib;
 
 const router = new Router();
 
@@ -21,16 +19,5 @@ router.get(
     },
   ),
 );
-
-// const thingsShowSerializer = new GenreSerializer({
-//   categorySerializer: new CategorySerializer({
-//     genreSerializer: new GenreSerializer(),
-//   }),
-// });
-
-// router.post(
-//   '/',
-//   withResponseMiddleware(thingsShowSerializer, (ctx) => genreLib.create(ctx.request.body)),
-// );
 
 module.exports = router;
